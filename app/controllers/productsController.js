@@ -26,7 +26,7 @@ productsController = {
 	postProduct: async (req, res) => {
 		try {
 			let { title, description, price, category } = req.body
-			userId = req.infoInApiKey.id // i put this info in the middleware
+			userId = req.headers.userid
 
 			const productId = await productService.postProduct(userId, title, description, price, category )
 			return res.json({"productId": productId})

@@ -126,6 +126,7 @@ usersService = {
         let userDAO = {
             id: user.id,
             name: user.name,
+            surname: user.surname,
             email:user.email,
             country:user.country,
             postalCode: user.postalCode
